@@ -1,11 +1,11 @@
 project = "init"
 
 variable "registry_username" {
-  type    = string
+  type = string
 }
 
 variable "registry_password" {
-  type    = string
+  type      = string
   sensitive = true
 }
 
@@ -13,9 +13,9 @@ app "demo" {
 
   build {
     use "docker-pull" {
-      image = "alpine"
-      tag   = "latest"
-      
+      image              = "alpine"
+      tag                = "latest"
+      disable_entrypoint = true
     }
 
     registry {
