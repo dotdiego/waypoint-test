@@ -1,7 +1,5 @@
 project = "init"
 
-<<<<<<< HEAD
-=======
 variable "registry_username" {
   type = string
 }
@@ -11,7 +9,6 @@ variable "registry_password" {
   sensitive = true
 }
 
->>>>>>> parent of fbe05f8... testing split of runner and project
 runner {
   enabled = true
   profile = "nomad-bootstrap-profile"
