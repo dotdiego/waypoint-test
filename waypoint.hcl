@@ -1,3 +1,5 @@
+project = "init"
+
 runner {
   enabled = true
   profile = "nomad-bootstrap-profile"
