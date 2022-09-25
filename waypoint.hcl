@@ -9,8 +9,15 @@ variable "registry_password" {
   sensitive = true
 }
 
-app "demo" {
+runner {
+  enabled = true
+  profile = "nomad-bootstrap-profile"
+  data_source "git" {
+    url = "https://github.com/dotdiego/waypoint-test.git"
+  }
+}
 
+app "demo" {
   build {
     use "docker-pull" {
       image              = "alpine"
